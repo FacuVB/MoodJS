@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <svg id="wave" style="transform: rotate(180deg); transition: 0.3s;" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 490">
+            <defs>
+                <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                    <stop stop-color="rgba(66, 47, 117, 1)" offset="0%"></stop>
+                    <stop stop-color="rgba(0, 0, 0, 1)" offset="100%"></stop>
+                </linearGradient>
+            </defs>
+            <path style="transform: translate(0, 0px); opacity: 1;" fill="url(#sw-gradient-0)"
+                d="M0,294L26.7,269.5C53.3,245,107,196,160,212.3C213.3,229,267,310,320,285.8C373.3,261,427,131,480,122.5C533.3,114,587,229,640,228.7C693.3,229,747,114,800,73.5C853.3,33,907,65,960,122.5C1013.3,180,1067,261,1120,245C1173.3,229,1227,114,1280,130.7C1333.3,147,1387,294,1440,318.5C1493.3,343,1547,245,1600,245C1653.3,245,1707,343,1760,383.8C1813.3,425,1867,408,1920,343C1973.3,278,2027,163,2080,155.2C2133.3,147,2187,245,2240,253.2C2293.3,261,2347,180,2400,155.2C2453.3,131,2507,163,2560,163.3C2613.3,163,2667,131,2720,98C2773.3,65,2827,33,2880,89.8C2933.3,147,2987,294,3040,359.3C3093.3,425,3147,408,3200,375.7C3253.3,343,3307,294,3360,285.8C3413.3,278,3467,310,3520,343C3573.3,376,3627,408,3680,392C3733.3,376,3787,310,3813,277.7L3840,245L3840,490L3813.3,490C3786.7,490,3733,490,3680,490C3626.7,490,3573,490,3520,490C3466.7,490,3413,490,3360,490C3306.7,490,3253,490,3200,490C3146.7,490,3093,490,3040,490C2986.7,490,2933,490,2880,490C2826.7,490,2773,490,2720,490C2666.7,490,2613,490,2560,490C2506.7,490,2453,490,2400,490C2346.7,490,2293,490,2240,490C2186.7,490,2133,490,2080,490C2026.7,490,1973,490,1920,490C1866.7,490,1813,490,1760,490C1706.7,490,1653,490,1600,490C1546.7,490,1493,490,1440,490C1386.7,490,1333,490,1280,490C1226.7,490,1173,490,1120,490C1066.7,490,1013,490,960,490C906.7,490,853,490,800,490C746.7,490,693,490,640,490C586.7,490,533,490,480,490C426.7,490,373,490,320,490C266.7,490,213,490,160,490C106.7,490,53,490,27,490L0,490Z">
+            </path>
+        </svg>
+        <img class="logo" src="img/logo.png" alt="" />
+    </header>
+    <div class="container-fluid mb-5 barra">
+        <nav class="navbar navbar-expand-lg">
+            <div class="d-flex justify-content-start">
+                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                    <li class="nav-item1" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                            aria-selected="true">
+                            Home
+                        </button>
+                    </li>
+                    <li class="nav-item3" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                            aria-selected="false">
+                            Carrito
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="alert alert-success container position-sticky top-0 hide" role="alert">
+            Agregaste un producto al carrito
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <section class="container-fluid mt-5 mb-5">
+                    <div class="row">
+                        <aside class="col-2">
+                            <nav>
+                                <div class="list-group">
+                                    <li href="# " class="list-group-item list-group-item-action active"aria-current="true ">
+                                        GENEROS
+                                    </li>
+                                    <a href="# " class="list-group-item list-group-item-action hvr-sweep-to-right todos btn-menu"
+                                         data-filter="todos">
+                                        TODO
+                                    </a>
+                                    <a href="# " class="list-group-item list-group-item-action hvr-sweep-to-right rock btn-menu"
+                                    data-filter="rock">
+                                        ROCK
+                                    </a>
+                                    <a href="# " class="list-group-item list-group-item-action hvr-sweep-to-right rockN btn-menu"
+                                    data-filter="rockN">
+                                        ROCK NACIONAL
+                                    </a>
+                                    <a href="# " class="list-group-item list-group-item-action hvr-sweep-to-right hardrock btn-menu"
+                                    data-filter="hardrock">
+                                        HARD ROCK & METAL
+                                    </a>
+                                    <a href="# " class="list-group-item list-group-item-action hvr-sweep-to-right edm btn-menu"
+                                    data-filter="edm">
+                                        EDM
+                                    </a>
+                                    <a href="# " class="list-group-item list-group-item-action hvr-sweep-to-right hiphop btn-menu"
+                                    data-filter="hiphop">
+                                        HIP HOP
+                                    </a>
+                                    <a href="# " class="list-group-item list-group-item-action hvr-sweep-to-right latin btn-menu"
+                                    data-filter="latin">
+                                        LATINA
+                                    </a>
+                                    <a href="# " class="list-group-item list-group-item-action hvr-sweep-to-right pop btn-menu"
+                                    data-filter="pop">
+                                        POP
+                                    </a>
+                                    <a href="# " class="list-group-item list-group-item-action hvr-sweep-to-right kpop btn-menu"
+                                    data-filter="kpop">
+                                        K-POP
+                                    </a>
+                                </div>
+                            </nav>
+                        </aside>
+                        <div class="col-10">
+                            <div class="container">
+                                <div class="d-flex justify-content-center">
+                                    <main class="col-10">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 mb-3">
+                                                    <div class="card rock" style="width: 18rem;">
+                                                        <img src="img/Albums/Rolling Stones - Blue & Lenoseme.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Blue & Lenoseme</h5>
+                                                            <h6 class="card-title2">Rolling Stones</h6>
+                                                            <p class="card-text price">$ 12650.</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card rock" style="width: 18rem;">
+                                                        <img src="img/Albums/The Beatles - Abbey Road Anniversary.png"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Abbey Road</h5>
+                                                            <h6 class="card-title2">The Beatles</h6>
+                                                            <p class="card-text price">$ 12650.</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card rock" style="width: 18rem;">
+                                                        <img src="img/Albums/The Killers - Pressure Machine.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Pressure Machine</h5>
+                                                            <h6 class="card-title2">The Killers</h6>
+                                                            <p class="card-text price">$ 3000</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card rockN" style="width: 18rem;">
+                                                        <img src="img/Albums/Cerati - Fuerza Natural.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Fuerza Natural</h5>
+                                                            <h6 class="card-title2">Gustavo Cerati</h6>
+                                                            <p class="card-text price">$ 6250</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card rockN" style="width: 18rem;">
+                                                        <img src="img/Albums/Ciro y los persas - Guerras (Un viaje en el tiempo).jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Guerras...</h5>
+                                                            <h6 class="card-title2">Ciro y los persas</h6>
+                                                            <p class="card-text price">$ 4999</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card rockN" style="width: 18rem;">
+                                                        <img src="img/Albums/Divididos - Haciendo cosas raras.png"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Haciendo cosas raras</h5>
+                                                            <h6 class="card-title2">Divididos</h6>
+                                                            <p class="card-text price">$ 3400.</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card hardrock" style="width: 18rem;">
+                                                        <img src="img/Albums/ACDC -Live in River Plate.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Live River Plate 2009</h5>
+                                                            <h6 class="card-title2">ACDC</h6>
+                                                            <p class="card-text price">$ 2360.</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card hardrock" style="width: 18rem;">
+                                                        <img src="img/Albums/Metallica - S&M2.png" class="card-img-top"alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">S&M2</h5>
+                                                            <h6 class="card-title2">Metallica</h6>
+                                                            <p class="card-text price">$ 3077</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card hardrock" style="width: 18rem;">
+                                                        <img src="img/Albums/Evanescence – The Bitter Truth.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">The Bitter Truth</h5>
+                                                            <h6 class="card-title2">Evanescence</h6>
+                                                            <p class="card-text price">$ 8750</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card edm" style="width: 18rem;">
+                                                        <img src="img/Albums/Avicii - True.jpg" class="card-img-top"alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">True</h5>
+                                                            <h6 class="card-title2">Avicii</h6>
+                                                            <p class="card-text price">$ 4310</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card edm" style="width: 18rem;">
+                                                        <img src="img/Albums/Marshmello - Shockwave.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Shockwave</h5>
+                                                            <h6 class="card-title2">Marshmello</h6>
+                                                            <p class="card-text price">$ 5400</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card edm" style="width: 18rem;">
+                                                        <img src="img/Albums/Steve Aoki - Neon Future IV.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Neon Future IV</h5>
+                                                            <h6 class="card-title2">Steve Aoki</h6>
+                                                            <p class="card-text price">$ 1600</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card hiphop" style="width: 18rem;">
+                                                        <img src="img/Albums/Drake - Certified Lover Boy.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Certified Lover Boy</h5>
+                                                            <h6 class="card-title2">Drake</h6>
+                                                            <p class="card-text price">$ 2990</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card hiphop" style="width: 18rem;">
+                                                        <img src="img/Albums/Doja Cat - Planet Her.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Planet Her</h5>
+                                                            <h6 class="card-title2">Doja Cat</h6>
+                                                            <p class="card-text price">$ 3450</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card hiphop" style="width: 18rem;">
+                                                        <img src="img/Albums/Megan Thee Stallion - Good News.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Good News</h5>
+                                                            <h6 class="card-title2">Megan Thee Stallion</h6>
+                                                            <p class="card-text price">$ 3250</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card latin" style="width: 18rem;">
+                                                        <img src="img/Albums/Maria Becerra - Animal.png"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Animal</h5>
+                                                            <h6 class="card-title2">Maria Becerra</h6>
+                                                            <p class="card-text price">$ 4500</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card latin" style="width: 18rem;">
+                                                        <img src="img/Albums/Bad Bunny - El ultimo tour del mundo.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">El ultimo tour...</h5>
+                                                            <h6 class="card-title2">Bad Bunny</h6>
+                                                            <p class="card-text price">$ 3600</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card latin" style="width: 18rem;">
+                                                        <img src="img/Albums/J Balvin -  Summer Vacation.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Summer Vacation</h5>
+                                                            <h6 class="card-title2">J Balvin</h6>
+                                                            <p class="card-text price">$ 4300</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card pop" style="width: 18rem;">
+                                                        <img src="img/Albums/Dua Lipa - Future Nostalgia.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Future Nostalgia</h5>
+                                                            <h6 class="card-title2">Dua Lipa</h6>
+                                                            <p class="card-text price">$ 4900</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card pop" style="width: 18rem;">
+                                                        <img src="img/Albums/Ariana Grande - My Everything.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">My Everything</h5>
+                                                            <h6 class="card-title2">Ariana Grande</h6>
+                                                            <p class="card-text price">$ 3900</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card pop" style="width: 18rem;">
+                                                        <img src="img/Albums/Olivia Rodrigo - Sour.jpg"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Sour</h5>
+                                                            <h6 class="card-title2">Olivia Rodrigo</h6>
+                                                            <p class="card-text price">$4050</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card kpop" style="width: 18rem;">
+                                                        <img src="img/Albums/Blackpink - The Album.png"class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">The Album</h5>
+                                                            <h6 class="card-title2">Blackpink</h6>
+                                                            <p class="card-text price">$ 7990</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card kpop" style="width: 18rem;">
+                                                        <img src="img/Albums/BTS-Butter.jpg" class="card-img-top"alt="... " />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Butter</h5>
+                                                            <h6 class="card-title2">BTS</h6>
+                                                            <p class="card-text price">$ 6990</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 mb-3">
+                                                    <div class="card kpop" style="width: 18rem;">
+                                                        <img src="img/Albums/TXT - The chaos chapter fight or escape.jpg"class="card-img-top" alt="... " />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">The chaos chapter: F or S</h5>
+                                                            <h6 class="card-title2">TXT</h6>
+                                                            <p class="card-text price">$ 7990</p>
+                                                            <button class="btn boton">Comprar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </main>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <section class="container-fluid mt-5 mb-5">
+                    <table class="table table-dark table-hover">
+                        <thead>
+                            <tr class="text-primary">
+                                <th scope="col">Producto</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody"></tbody>
+                    </table>
+                    <br />
+                    <br />
+                    <div class="row mx-4">
+                        <div class="col">
+                            <h3 class="itemCartTotal text-white">TOTAL: 0</h3>
+                        </div>
+                        <div class="col d-flex justify-content-end">
+                            <button class="btn btn-success">Pagar</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer font-small footerColor">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex justify-content-center col-md-12 py-5 socialFooter">
+                    <div class="mb-5 flex-center">
+                        <a class="fb-ic social">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x social"></i>
+                        </a>
+                        <a class="tw-ic social">
+                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x social"></i>
+                        </a>
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x social"></i>
+                        </a>
+                        <a class="ins-ic social">
+                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x social"></i>
+                        </a>
+                        <a class="pin-ic social">
+                            <i class="fab fa-pinterest fa-lg white-text fa-2x social"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerCopyright text-center py-3">
+            © 2021 Copyright:
+            <a class="git" href="https://github.com/FacuVB ">Facu VB</a>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/1941d750e2.js " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/app.js" type="module"></script>
+</body>
+
+</html>
