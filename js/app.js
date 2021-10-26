@@ -153,3 +153,11 @@ window.onload = function () {
     })
   });
 
+//Sweet Alert
+$("#btn1").click(function(){
+  Swal.fire(
+    'GENIAL!',
+    'GRACIAS POR TU COMPRA',
+    'success'
+  )
+})
