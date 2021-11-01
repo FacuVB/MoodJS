@@ -166,17 +166,86 @@ window.onload = function(){
   }
 }
 
-//Buscador
+//Buscador por genero
+(function(){
+	$(document).ready(function(){
+		$(".btn-menu").click(function(e){
+			e.preventDefault();
+			var filtro = $(this).attr("data-filter");
 
-$(document).ready(function(){
-  $(".btn-menu").click(function(){
-    let filtro = $(this).attr("data-filter");
-    if (filtro == "todos"){
-      $(".card").show(500);
+			if (filtro == "todos") {
+				$(".box-img").show(500);
+			} else {
+				$(".box-img").not("."+filtro).hide(500);
+				$(".box-img").filter("."+filtro).show(500);
+			}
+		});
+	});
+}())
+
+//Informacion artista y letras API
+const d = document,
+$form = d.getElementById('song-search'),
+$error = d.querySelector('.error'),
+$info = d.querySelector('.info'),
+$artist = d.querySelector('.artist'),
+$song = d.querySelector('.song');
+
+$form.addEventListener("submit", async e => {
+  e.preventDefault();
+
+  try {
+    let artist = e.target.artist.value.toLowerCase(),
+    song = e.target.song.value.toLowerCase(),
+    $artistTemplate = "",
+    $songTemplate = ``,
+    artistAPI = `https://theaudiodb.com/api/v1/json/1/search.php?s=${artist}`, 
+    songAPI = `https://api.lyrics.ovh/v1/${artist}/${song}`,
+    artistFetch = fetch(artistAPI),
+    songFetch = fetch(songAPI),
+    [artistRes, songRes]=await Promise.all([artistFetch, songFetch]),
+    artistData = await artistRes.json(),
+    songData = await songRes.json();
+
+    //  console.log(artistRes, songRes);
+    console.log(artistData, songData);
+
+     if(artistData.artists === null){
+      $artistTemplate = `<h2> No se encontro ${artist}</h2>`
     }else{
-      $(".card").not("."+ filtro).hide(500);
-      $(".card").filter("."+filtro).show(500);
+      let artist = artistData.artists[0];
+      $artistTemplate = `
+      <h2 class="artistName">${artist.strArtist}</h2>
+					<img class="info" src="${artist.strArtistFanart2}"alt="${artist.strArtist}">
+					<b>Members</b>
+					<p>${artist.intMembers}</p>
+					<b>Country</b>
+					<p>${artist.strCountry}</p>
+					<b>Genre</b>
+					<p>${artist.strGenre}</p>
+          <b>Biography</b>
+					<p>${artist.strBiographyEN}${artist.strBiographyES}</p>
+					<b>Website :</b>
+					<a href="http://${artist.strWebsite}" target="_blank"> IR</a>
+      `
     }
-  })
-});
 
+    if(songData.error){
+      $songTemplate =  `<h2> No se encontro ${artist}</h2>`
+    }else{
+      $songTemplate = `
+      <h2>${song}</h2>
+      <blockquote>${songData.lyrics}</blockquote>
+      `;
+
+    }
+
+    $artist.innerHTML = $artistTemplate
+    $song.innerHTML = $songTemplate
+
+  } catch (error) {
+    console.log(error);
+    let message = error.statusText || "Ocurrio un error";
+    $error.innerHTML = `<p> Error ${error.status}: ${message}`;
+  }
+})
