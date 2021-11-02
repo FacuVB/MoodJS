@@ -1,25 +1,94 @@
-//==========CONSTANTES Y VARIABLES==========//
+//==========================IMPORTS==========================//
 
-const Clickbutton = document.querySelectorAll('.boton')
+import baseDeDatos from "./musicDB.js";
+
+//==================CONSTANTES Y VARIABLES==================//
+const domItems = document.querySelector('.galeria');
 const tbody = document.querySelector('.tbody')
 let carrito = []
+const d = document,
+$form = d.getElementById('song-search'),
+$error = d.querySelector('.error'),
+$artist = d.querySelector('.artist'),
+$song = d.querySelector('.song');
+
+//========================FUNCIONES========================//
+
+//RENDERIZAR LISTA DE PRODUCTOS
+
+function renderizarProductos() {
+  baseDeDatos.forEach((info) => {
+
+      // Estructura
+      const miNodo = document.createElement('div');
+      miNodo.classList.add('box-img');
+      miNodo.classList.add( info.genre)
+      miNodo.style.width = "18rem";
+      miNodo.style.marginRight = "2rem";
+      miNodo.style.marginBottom = "2rem";
+      miNodo.style.borderRadius = "10px"
+
+      // Body
+      const miNodoCardBody = document.createElement('div');
+      miNodoCardBody.classList.add('card-block');
+      miNodoCardBody.style.background = "#b69cd1";
+      miNodoCardBody.style.color = "#ffff"
+      
+
+      // Titulo
+      const miNodoTitle = document.createElement('h5');
+      miNodoTitle.classList.add('card-title');
+      miNodoTitle.textContent = info.album;
+
+      const miNodoTitle2 = document.createElement('h6');
+      miNodoTitle2.classList.add('card-title2');
+      miNodoTitle2.textContent = info.artist;
+
+      // Imagen
+      const miNodoImagen = document.createElement('img');
+      miNodoImagen.classList.add('img-fluid');
+      miNodoImagen.setAttribute('src', info.img);
+
+      // Precio
+      const miNodoPrecio = document.createElement('p');
+      miNodoPrecio.classList.add('card-text', 'price');
+      miNodoPrecio.textContent = '$' + info.price;
+
+      // Boton 
+      const miNodoBoton = document.createElement('button');
+      miNodoBoton.classList.add('btn');
+      miNodoBoton.classList.add('boton');
+      miNodoBoton.style.backgroundColor = "#422f75";
+      miNodoBoton.style.color = "#fffff";
+      miNodoBoton.textContent = "Comprar";
+      miNodoBoton.style.position = "relative";
+      miNodoBoton.style.bottom = "5px"
+      miNodoBoton.addEventListener('click', addToCarritoItem);
+      
+      
+   
+      // Insertamos cada parte del elemento card
+      
+      miNodoCardBody.appendChild(miNodoImagen);
+      miNodoCardBody.appendChild(miNodoTitle);
+      miNodoCardBody.appendChild(miNodoTitle2)
+      miNodoCardBody.appendChild(miNodoPrecio);
+      miNodoCardBody.appendChild(miNodoBoton);
+      miNodo.appendChild(miNodoCardBody);
+      domItems.appendChild(miNodo);
+  });
+}
 
 
-//==========FUNCIONES Y EVENTOS=============//
-
-//Evento click comprar
-Clickbutton.forEach(btn => {
-  btn.addEventListener('click', addToCarritoItem)
-})
 
 //Crea una nueva instancia item por cada vez que se ejecuta el eveto click de arriba
 function addToCarritoItem(e){
   const button = e.target
-  const item = button.closest('.card')
+  const item = button.closest('.box-img')
   const itemTitle = item.querySelector('.card-title').textContent;
   const itemTitle2 = item.querySelector(".card-title2").textContent;
   const itemPrice = item.querySelector('.price').textContent;
-  const itemImg = item.querySelector('.card-img-top').src;
+  const itemImg = item.querySelector('.img-fluid').src;
   
   const newItem = {
     title: itemTitle,
@@ -166,7 +235,6 @@ window.onload = function(){
   }
 }
 
-//Buscador por genero
 (function(){
 	$(document).ready(function(){
 		$(".btn-menu").click(function(e){
@@ -180,16 +248,13 @@ window.onload = function(){
 				$(".box-img").filter("."+filtro).show(500);
 			}
 		});
+
+		$("ul li").click(function(){
+			$(this).addClass("active").siblings().removeClass("active");
+		});
 	});
 }())
 
-//Informacion artista y letras API
-const d = document,
-$form = d.getElementById('song-search'),
-$error = d.querySelector('.error'),
-$info = d.querySelector('.info'),
-$artist = d.querySelector('.artist'),
-$song = d.querySelector('.song');
 
 $form.addEventListener("submit", async e => {
   e.preventDefault();
@@ -207,8 +272,6 @@ $form.addEventListener("submit", async e => {
     artistData = await artistRes.json(),
     songData = await songRes.json();
 
-    //  console.log(artistRes, songRes);
-    console.log(artistData, songData);
 
      if(artistData.artists === null){
       $artistTemplate = `<h2> No se encontro ${artist}</h2>`
@@ -249,3 +312,6 @@ $form.addEventListener("submit", async e => {
     $error.innerHTML = `<p> Error ${error.status}: ${message}`;
   }
 })
+
+
+renderizarProductos()

@@ -1,49 +1,51 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/1941d750e2.js" crossorigin="anonymous"></script>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Mood | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Mood | Home</title>
 </head>
 
 <body>
-	<header>
-		<div class=" header">
-			<img class="logo" src="img/logo.png" alt="">
-		</div>
-		<div class="menu">
-			<ul class="nav nav-pills" id="pills-tab" role="tablist">
-				<li class="nav-item1" role="presentation"><a href="#" class="hvr-sweep-to-top start"
-						class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-						type="button" role="tab" aria-controls="pills-home" aria-selected="true">HOME</a></li>
-				<li id="todos"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="todos">TODO</a></li>
-				<li id="rock"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="rock">ROCK</a></li>
-				<li id="nac"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="nac">ROCK NACIONAL</a></li>
-				<li id="hardrock"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="hardrock">HARDROCK</a>
-				</li>
-				<li id="edm"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="edm">EDM</a></li>
-				<li id="hiphop"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="hiphop">HIP HOP</a></li>
-				<li id="latin"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="latin">LATIN</a></li>
-				<li id="pop"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="pop">POP</a></li>
-				<li id="kpop"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="kpop">K-POP</a></li>
-				<li class="nav-item2" role="presentation"><a href="#" class=" hvr-sweep-to-top" class="nav-link"
-						id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
-						role="tab" aria-controls="pills-profile" aria-selected="false">INFO + LETRAS</a></li>
-				<li class="nav-item3" role="presentation"><a href="#" class="hvr-sweep-to-top end" class="nav-link"
-						id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button"
-						role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-shopping-cart"></i></a></li>
+    <header>
+        <div class="header">
+            <img class="logo" src="img/logo.png" alt="">
+        </div>
+        <div class="menu">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item1" role="presentation"><a href="#" class="hvr-sweep-to-top start"
+                        class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                        type="button" role="tab" aria-controls="pills-home" aria-selected="true">HOME</a></li>
+                <li id="todos"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="todos">TODO</a></li>
+                <li id="rock"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="rock">ROCK</a></li>
+                <li id="nac"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="nac">ROCK NACIONAL</a></li>
+                <li id="hardrock"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="hardrock">HARDROCK</a>
+                </li>
+                <li id="edm"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="edm">EDM</a></li>
+                <li id="hiphop"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="hiphop">HIP HOP</a></li>
+                <li id="latin"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="latin">LATIN</a></li>
+                <li id="pop"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="pop">POP</a></li>
+                <li id="kpop"><a href="#" class="btn-menu hvr-sweep-to-top" data-filter="kpop">K-POP</a></li>
+                <li class="nav-item2" role="presentation"><a href="#" class=" hvr-sweep-to-top" class="nav-link"
+                    id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
+                    role="tab" aria-controls="pills-profile" aria-selected="false">INFO + LETRAS</a></li>
+                <li class="nav-item3" role="presentation"><a href="#" class="hvr-sweep-to-top end" class="nav-link"
+                        id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button"
+                        role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-shopping-cart"></i></a></li>
 
-			</ul>
-		</div>
-	</header>
-	<div class="container alert-fixed">
+            </ul>
+        </div>
+    </header>
+    <div class="container alert-fixed">
 		<div class="">
 			<div class="alert alert-success justify-content-center hide" role="alert">
 				Producto añadido al carrito!
@@ -53,305 +55,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="tab-content container" id="pills-tabContent">
-		<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-			<div class="container">
-				<div class="galeria">
-					<div class="box-img rock">
-						<div class="card rock" style="width: 18rem;">
-							<img src="img/Albums/Rolling Stones - Blue & Lenoseme.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Blue & Lenoseme</h5>
-								<h6 class="card-title2">Rolling Stones</h6>
-								<p class="card-text price">$ 12650.</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
+    <div  class="tab-content container" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="container">
+                <div class="galeria"></div>
+            </div>
+        </div>
 
-					<div class="box-img rock">
-						<div class="card rock" style="width: 18rem;">
-							<img src="img/Albums/The Beatles - Abbey Road Anniversary.png" class="card-img-top"
-								alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Abbey Road</h5>
-								<h6 class="card-title2">The Beatles</h6>
-								<p class="card-text price">$ 12650.</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img rock">
-						<div class="card rock" style="width: 18rem;">
-							<img src="img/Albums/The Killers - Pressure Machine.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Pressure Machine</h5>
-								<h6 class="card-title2">The Killers</h6>
-								<p class="card-text price">$ 3000</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class=" box-img nac">
-						<div class="card nac" style="width: 18rem;">
-							<img src="img/Albums/Cerati - Fuerza Natural.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Fuerza Natural</h5>
-								<h6 class="card-title2">Gustavo Cerati</h6>
-								<p class="card-text price">$ 6250</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class=" box-img nac">
-						<div class="card nac" style="width: 18rem;">
-							<img src="img/Albums/Ciro y los persas - Guerras (Un viaje en el tiempo).jpg"
-								class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Guerras...</h5>
-								<h6 class="card-title2">Ciro y los persas</h6>
-								<p class="card-text price">$ 4999</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img nac">
-						<div class="card nac" style="width: 18rem;">
-							<img src="img/Albums/Divididos - Haciendo cosas raras.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Haciendo cosas raras</h5>
-								<h6 class="card-title2">Divididos</h6>
-								<p class="card-text price">$ 3400.</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img hardrock">
-						<div class="card hardrock" style="width: 18rem;">
-							<img src="img/Albums/ACDC -Live in River Plate.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Live River Plate 2009</h5>
-								<h6 class="card-title2">ACDC</h6>
-								<p class="card-text price">$ 2360.</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img hardrock">
-						<div class="card hardrock" style="width: 18rem;">
-							<img src="img/Albums/Metallica - S&M2.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">S&M2</h5>
-								<h6 class="card-title2">Metallica</h6>
-								<p class="card-text price">$ 3077</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img hardrock">
-						<div class="card hardrock" style="width: 18rem;">
-							<img src="img/Albums/Evanescence – The Bitter Truth.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">The Bitter Truth</h5>
-								<h6 class="card-title2">Evanescence</h6>
-								<p class="card-text price">$ 8750</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img edm">
-						<div class="card edm" style="width: 18rem;">
-							<img src="img/Albums/Avicii - True.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">True</h5>
-								<h6 class="card-title2">Avicii</h6>
-								<p class="card-text price">$ 4310</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img edm">
-						<div class="card edm" style="width: 18rem;">
-							<img src="img/Albums/Marshmello - Shockwave.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Shockwave</h5>
-								<h6 class="card-title2">Marshmello</h6>
-								<p class="card-text price">$ 5400</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img edm">
-						<div class="card edm" style="width: 18rem;">
-							<img src="img/Albums/Steve Aoki - Neon Future IV.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Neon Future IV</h5>
-								<h6 class="card-title2">Steve Aoki</h6>
-								<p class="card-text price">$ 1600</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img hiphop">
-						<div class="card hiphop" style="width: 18rem;">
-							<img src="img/Albums/Drake - Certified Lover Boy.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Certified Lover Boy</h5>
-								<h6 class="card-title2">Drake</h6>
-								<p class="card-text price">$ 2990</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img hiphop">
-						<div class="card hiphop" style="width: 18rem;">
-							<img src="img/Albums/Doja Cat - Planet Her.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Planet Her</h5>
-								<h6 class="card-title2">Doja Cat</h6>
-								<p class="card-text price">$ 3450</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img hiphop">
-						<div class="card hiphop" style="width: 18rem;">
-							<img src="img/Albums/Megan Thee Stallion - Good News.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Good News</h5>
-								<h6 class="card-title2">Megan Thee Stallion</h6>
-								<p class="card-text price">$ 3250</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img latin">
-						<div class="card latin" style="width: 18rem;">
-							<img src="img/Albums/Bad Bunny - El ultimo tour del mundo.jpg" class="card-img-top"
-								alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">El ultimo tour...</h5>
-								<h6 class="card-title2">Bad Bunny</h6>
-								<p class="card-text price">$ 3600</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img latin">
-						<div class="card latin" style="width: 18rem;">
-							<img src="img/Albums/Maria Becerra - Animal.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Animal</h5>
-								<h6 class="card-title2">Maria Becerra</h6>
-								<p class="card-text price">$ 4500</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img latin">
-						<div class="card latin" style="width: 18rem;">
-							<img src="img/Albums/J Balvin -  Summer Vacation.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Summer Vacation</h5>
-								<h6 class="card-title2">J Balvin</h6>
-								<p class="card-text price">$ 4300</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img pop">
-						<div class="card pop" style="width: 18rem;">
-							<img src="img/Albums/Dua Lipa - Future Nostalgia.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Future Nostalgia</h5>
-								<h6 class="card-title2">Dua Lipa</h6>
-								<p class="card-text price">$ 4900</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img pop">
-						<div class="card pop" style="width: 18rem;">
-							<img src="img/Albums/Ariana Grande - My Everything.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">My Everything</h5>
-								<h6 class="card-title2">Ariana Grande</h6>
-								<p class="card-text price">$ 3900</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img pop">
-						<div class="card pop" style="width: 18rem;">
-							<img src="img/Albums/Olivia Rodrigo - Sour.jpg" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Sour</h5>
-								<h6 class="card-title2">Olivia Rodrigo</h6>
-								<p class="card-text price">$4050</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img kpop">
-						<div class="card kpop" style="width: 18rem;">
-							<img src="img/Albums/Blackpink - The Album.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">The Album</h5>
-								<h6 class="card-title2">Blackpink</h6>
-								<p class="card-text price">$ 7990</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img kpop">
-						<div class="card kpop" style="width: 18rem;">
-							<img src="img/Albums/BTS-Butter.jpg" class="card-img-top" alt="... " />
-							<div class="card-body">
-								<h5 class="card-title">Butter</h5>
-								<h6 class="card-title2">BTS</h6>
-								<p class="card-text price">$ 6990</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="box-img kpop">
-						<div class="card kpop" style="width: 18rem;">
-							<img src="img/Albums/TXT - The chaos chapter fight or escape.jpg" class="card-img-top"
-								alt="... " />
-							<div class="card-body">
-								<h5 class="card-title">The chaos chapter: F or S</h5>
-								<h6 class="card-title2">TXT</h6>
-								<p class="card-text price">$ 7990</p>
-								<button class="btn boton">Comprar</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 			<form id="song-search" method="get">
 				<div class="mb-3 lyrics">
 					<label class="form-label" name>Grupo o solista</label>
@@ -376,45 +87,46 @@
 			</div>
 			</div>
 		</div>
-		<div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-			<section class="container-fluid mt-5 mb-5">
-				<table class="table table-dark table-hover">
-					<thead>
-						<tr class="text-primary">
-							<th scope="col">Producto</th>
-							<th scope="col">Descripción</th>
-							<th scope="col">Precio</th>
-							<th scope="col">Cantidad</th>
-							<th scope="col">Eliminar</th>
-						</tr>
-					</thead>
-					<tbody class="tbody"></tbody>
-				</table>
-				<br />
-				<br />
-				<div class="row mx-4">
-					<div class="col">
-						<h3 class="itemCartTotal text-white">TOTAL: 0</h3>
-					</div>
-					<div class="col d-flex justify-content-end mb-5">
-						<button id="btn1" class="btn btn-success">Pagar</button>
-					</div>
-				</div>
-			</section>
-		</div>
-	</div>
-	<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+
+        <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <section class="container-fluid mt-5 mb-5">
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr class="text-primary">
+                            <th scope="col">Producto</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody"></tbody>
+                </table>
+                <br />
+                <br />
+                <div class="row mx-4">
+                    <div class="col">
+                        <h3 class="itemCartTotal text-white">TOTAL: 0</h3>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                        <button id="btn1" class="btn btn-success">Pagar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
 		<div class="container text-center">
 			<small>Copyright &copy; <a class="git" href="https://github.com/FacuVB ">Facu VB</a></small>
 		</div>
 	</footer>
-	<script src="https://kit.fontawesome.com/1941d750e2.js " crossorigin="anonymous "></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-		crossorigin="anonymous"></script>
-	<script src="js/jquery-3.6.0.min.js"></script>
-	<script src="js/app.js" type="module"></script>
 
+    <script src="https://kit.fontawesome.com/1941d750e2.js " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="JS/app.js" type="module"></script>
 </body>
 
 </html>
