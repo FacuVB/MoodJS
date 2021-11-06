@@ -6,11 +6,19 @@ import baseDeDatos from "./musicDB.js";
 const domItems = document.querySelector('.galeria');
 const tbody = document.querySelector('.tbody')
 let carrito = []
+const btnPagar = document.querySelector('#pagar')
 const d = document,
 $form = d.getElementById('song-search'),
 $error = d.querySelector('.error'),
 $artist = d.querySelector('.artist'),
 $song = d.querySelector('.song');
+const btnSwitch = document.querySelector('#switch')
+const body = document.querySelector('body')
+const tableDark = document.querySelector('#tableDark')
+const totalDark = document.querySelector('#tableTotalDark')
+const headDark = document.querySelector('#headTableDark')
+const infoDark = document.querySelector('#infoDark')
+const lyricsDark = document.querySelector('#lyricsDark')
 
 //========================FUNCIONES========================//
 
@@ -218,6 +226,28 @@ function sumaCantidad(e){
   })
 }
 
+
+btnPagar.addEventListener('click', () => {
+  carrito = []
+  renderCarrito()
+  Swal.fire({
+  icon: 'success',
+    title: 'GRACIAS POR TU COMPRA!!!',
+     width: 600,
+padding: '3em',
+background: 'url(../img/gradient.png)',
+backdrop: `
+  rgba(0,0,123,0.4)
+  left top
+  no-repeat
+`,
+customClass: {
+    title: 'custom-title-class',
+  }
+  })
+  
+})
+
 //Guardar carrito en localStorage
 
 function addLocalStorage(){
@@ -313,5 +343,16 @@ $form.addEventListener("submit", async e => {
   }
 })
 
+//NIGHT MODE
+
+btnSwitch.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  tableDark.classList.toggle('table-dark')
+  totalDark.classList.toggle('text-white')
+  headDark.classList.toggle('text-white')
+  infoDark.classList.toggle('text-white')
+  lyricsDark.classList.toggle('text-white')
+  btnSwitch.classList.toggle('active')
+})
 
 renderizarProductos()

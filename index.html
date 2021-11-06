@@ -40,9 +40,14 @@
                     role="tab" aria-controls="pills-profile" aria-selected="false">INFO + LETRAS</a></li>
                 <li class="nav-item3" role="presentation"><a href="#" class="hvr-sweep-to-top end" class="nav-link"
                         id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button"
-                        role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-shopping-cart"></i></a></li>
-
+                        role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-shopping-cart"></i></a></li>     
             </ul>
+        </div>
+        <div class="d-flex justify-content-end nightMode">
+            <button class="switch" id="switch">
+                <span><i class="fas fa-sun"></i></span>
+                <span><i class="fas fa-moon"></i></span>
+            </button>  
         </div>
     </header>
     <div class="container alert-fixed">
@@ -78,10 +83,10 @@
 			<aside class="error"></aside>
 			<div class="container mb-5">
 				<div class="row">
-				<article class="col-8 artist">
+				<article class="col-8 artist" id="infoDark">
 					<h2>INFO</h2>
 				</article>
-				<article class="col-4 song">
+				<article class="col-4 song" id="lyricsDark">
 					<h2>LYRICS</h2>
 				</article>
 			</div>
@@ -90,9 +95,9 @@
 
         <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
             <section class="container-fluid mt-5 mb-5">
-                <table class="table table-dark table-hover">
+                <table class="table table-light table-striped table-hover" id="tableDark">
                     <thead>
-                        <tr class="text-primary">
+                        <tr class="light" id="headTableDark">
                             <th scope="col">Producto</th>
                             <th scope="col">Descripcion</th>
                             <th scope="col">Precio</th>
@@ -106,10 +111,10 @@
                 <br />
                 <div class="row mx-4">
                     <div class="col">
-                        <h3 class="itemCartTotal text-white">TOTAL: 0</h3>
+                        <h3 class="itemCartTotal" id="tableTotalDark">TOTAL: 0</h3>
                     </div>
                     <div class="col d-flex justify-content-end">
-                        <button id="btn1" class="btn btn-success">Pagar</button>
+                        <button id="pagar" class="btn btn-success">Pagar</button>
                     </div>
                 </div>
             </section>
@@ -125,6 +130,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+        <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="JS/app.js" type="module"></script>
 </body>
